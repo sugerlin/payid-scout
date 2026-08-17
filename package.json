@@ -1,0 +1,9 @@
+{
+  "name": "payid-scout",
+  "version": "1.1.0",
+  "license": "MIT",
+  "description": "运行在 cloudflare.pay 页面上的 PayID Scout Chrome 扩展",
+  "scripts": {
+    "check": "node --check extension/candidate-data.js && node --check extension/content.js && node --check extension/background.js"
+  }
+}

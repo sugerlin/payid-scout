@@ -1,0 +1,73 @@
+#payid-scout-launcher,
+#payid-scout-panel {
+  all: initial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #171717;
+  box-sizing: border-box;
+}
+#payid-scout-launcher *, #payid-scout-panel * { box-sizing: border-box; }
+#payid-scout-launcher { position: fixed; right: 22px; bottom: 22px; z-index: 2147483646; }
+#payid-scout-launcher button { border: 0; padding: 0 17px; min-height: 42px; border-radius: 999px; color: #fff; background: #171717; box-shadow: 0 8px 22px rgba(0,0,0,.2); cursor: pointer; font-size: 12px; font-weight: 700; }
+#payid-scout-launcher button:hover { background: #f06443; }
+#payid-scout-panel { position: fixed; top: 18px; right: 18px; z-index: 2147483647; display: flex; flex-direction: column; width: min(720px, calc(100vw - 36px)); max-height: calc(100vh - 36px); overflow: hidden; border: 1px solid rgba(23,23,23,.16); border-radius: 16px; background: #fbfaf8; box-shadow: 0 24px 70px rgba(23,23,23,.25); }
+#payid-scout-panel[hidden], #payid-scout-launcher[hidden] { display: none; }
+#payid-scout-panel .ps-head { display: flex; align-items: start; justify-content: space-between; gap: 20px; padding: 20px 22px 16px; color: #fff; background: #171717; }
+#payid-scout-panel .ps-kicker { margin: 0 0 7px; color: #ff8c6e; font: 10px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; }
+#payid-scout-panel h2 { margin: 0; color: #fff; font-size: 23px; letter-spacing: -.06em; }
+#payid-scout-panel .ps-subtitle { margin: 7px 0 0; color: #aaa7a1; font-size: 11px; }
+#payid-scout-panel .ps-close { width: 30px; height: 30px; border: 1px solid rgba(255,255,255,.23); border-radius: 50%; color: #fff; background: transparent; cursor: pointer; font-size: 17px; }
+#payid-scout-panel .ps-close:hover { border-color: #ff8c6e; color: #ff8c6e; }
+#payid-scout-panel .ps-body { overflow: auto; padding: 16px 22px 18px; }
+#payid-scout-panel .ps-label { display: block; margin: 0 0 8px; color: #6d6963; font-size: 11px; font-weight: 700; }
+#payid-scout-panel textarea { display: block; width: 100%; height: 88px; resize: vertical; padding: 12px; border: 1px solid #d9d4cc; border-radius: 9px; outline: 0; color: #171717; background: #fff; font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+#payid-scout-panel textarea:focus { border-color: #f06443; box-shadow: 0 0 0 3px rgba(240,100,67,.14); }
+#payid-scout-panel .ps-note { margin: 7px 0 12px; color: #938d85; font-size: 10px; line-height: 1.4; }
+#payid-scout-panel .ps-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+#payid-scout-panel button { font-family: inherit; }
+#payid-scout-panel .ps-quiet, #payid-scout-panel .ps-action, #payid-scout-panel select { min-height: 34px; padding: 0 11px; border: 1px solid #d9d4cc; border-radius: 7px; color: #4e4a45; background: #fff; cursor: pointer; font-size: 11px; }
+#payid-scout-panel .ps-quiet:hover { border-color: #f06443; color: #d65337; }
+#payid-scout-panel select { padding-right: 25px; }
+#payid-scout-panel .ps-actions { display: flex; gap: 8px; margin-top: 15px; }
+#payid-scout-panel .ps-action { flex: 1; color: #fff; border-color: #171717; background: #171717; font-weight: 700; }
+#payid-scout-panel .ps-action:hover { background: #343434; }
+#payid-scout-panel .ps-action.stop { color: #c74b35; border-color: #f5c9bd; background: #fff6f3; }
+#payid-scout-panel button:disabled { opacity: .45; cursor: default; }
+#payid-scout-panel .ps-progress { margin-top: 12px; color: #77716a; font: 10px ui-monospace, SFMono-Regular, Menlo, monospace; }
+#payid-scout-panel .ps-progress-track { height: 4px; margin-top: 7px; overflow: hidden; border-radius: 99px; background: #e6e1da; }
+#payid-scout-panel .ps-progress-fill { height: 100%; width: 0; border-radius: inherit; background: #f06443; transition: width .2s ease; }
+#payid-scout-panel .ps-filter-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 17px 0 9px; }
+#payid-scout-panel .ps-check { display: flex; align-items: center; gap: 7px; color: #77716a; font-size: 11px; cursor: pointer; }
+#payid-scout-panel .ps-check input { accent-color: #f06443; }
+#payid-scout-panel .ps-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-bottom: 10px; border: 1px solid #e0dbd4; background: #e0dbd4; }
+#payid-scout-panel .ps-metric { padding: 9px 10px; background: #f4f1ec; }
+#payid-scout-panel .ps-metric span { display: block; color: #8a847c; font-size: 9px; }
+#payid-scout-panel .ps-metric b { display: block; margin-top: 5px; font: 500 17px ui-monospace, SFMono-Regular, Menlo, monospace; }
+#payid-scout-panel .ps-table-wrap { overflow: auto; max-height: 295px; border-top: 2px solid #171717; }
+#payid-scout-panel table { width: 100%; border-collapse: collapse; font-size: 11px; }
+#payid-scout-panel th { padding: 9px 8px; color: #8a847c; border-bottom: 1px solid #e0dbd4; text-align: left; font: 9px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
+#payid-scout-panel td { padding: 10px 8px; border-bottom: 1px solid #e9e4de; vertical-align: middle; }
+#payid-scout-panel .ps-word { font-weight: 700; letter-spacing: -.02em; }
+#payid-scout-panel .ps-meaning { display: block; max-width: 150px; overflow: hidden; color: #8a847c; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+#payid-scout-panel .ps-score { font: 500 16px ui-monospace, SFMono-Regular, Menlo, monospace; }
+#payid-scout-panel .ps-badge { display: inline-block; padding: 4px 6px; border-radius: 4px; font: 9px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
+#payid-scout-panel .flag-none { color: #187552; background: #dff0e8; }
+#payid-scout-panel .flag-generic { color: #8e5d18; background: #f6e9d0; }
+#payid-scout-panel .flag-strong { color: #a24935; background: #f9ddd4; }
+#payid-scout-panel .flag-only { color: #5b6e91; background: #e1eaf5; }
+#payid-scout-panel .status-available { color: #187552; background: #dff0e8; }
+#payid-scout-panel .status-reserved { color: #a24935; background: #f9ddd4; }
+#payid-scout-panel .status-checking { color: #91621d; background: #f6e9d0; }
+#payid-scout-panel .status-unknown, #payid-scout-panel .status-rate { color: #6d6963; background: #ebe8e2; }
+#payid-scout-panel .ps-empty { padding: 30px 10px; color: #8a847c; text-align: center; font-size: 11px; }
+#payid-scout-panel .ps-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 14px; color: #9b958d; font-size: 9px; }
+#payid-scout-panel .ps-footer button { border: 0; color: #d65337; background: transparent; cursor: pointer; font-size: 10px; font-weight: 700; }
+#payid-scout-panel .ps-error { margin-top: 9px; padding: 8px 10px; border-left: 2px solid #f06443; color: #a24935; background: #fff3ef; font-size: 10px; line-height: 1.45; }
+#payid-scout-panel .ps-toast { position: absolute; right: 20px; bottom: 17px; max-width: 270px; padding: 9px 11px; border-radius: 7px; color: #fff; background: #171717; box-shadow: 0 5px 17px rgba(0,0,0,.16); font-size: 10px; opacity: 0; transform: translateY(6px); transition: opacity .18s, transform .18s; pointer-events: none; }
+#payid-scout-panel .ps-toast.show { opacity: 1; transform: translateY(0); }
+@media (max-width: 560px) {
+  #payid-scout-panel { top: 8px; right: 8px; width: calc(100vw - 16px); max-height: calc(100vh - 16px); }
+  #payid-scout-panel .ps-body { padding-right: 14px; padding-left: 14px; }
+  #payid-scout-panel .ps-summary { grid-template-columns: repeat(2, 1fr); }
+  #payid-scout-panel th:nth-child(3), #payid-scout-panel td:nth-child(3) { display: none; }
+  #payid-scout-launcher { right: 12px; bottom: 12px; }
+}
