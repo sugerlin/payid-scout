@@ -1,4 +1,4 @@
-# PayID Scout — 本地优先的 PayID 候选扫描器
+# PayID Scout — 本地优先的cloudflare PayID 候选扫描器 id注册工具
 
 ![PayID Scout](assets/payid-scout-banner.png)
 
